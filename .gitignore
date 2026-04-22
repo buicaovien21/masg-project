@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python vendored deps (used only for local PDF extraction)
+.vendor/
+
+# Logs
+*.log
+
+# OS / misc
+Thumbs.db

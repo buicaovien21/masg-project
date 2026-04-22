@@ -1,0 +1,98 @@
+// Illustrative MASG project locations across Mount Alexander Shire.
+window.MASG_PROJECTS = [
+  {
+    id: "repair-cafe-castlemaine",
+    title: "Repair Cafe",
+    category: "waste",
+    lat: -37.0658,
+    lng: 144.2177,
+    address: "Castlemaine Community Centre",
+    town: "Castlemaine",
+    nextEvent: "Sat 9 May, 10am",
+    description:
+      "Monthly volunteer-run session to repair, reuse, and reduce household waste.",
+  },
+  {
+    id: "wash-against-waste-maldon",
+    title: "Wash Against Waste",
+    category: "waste",
+    lat: -36.9986,
+    lng: 144.0693,
+    address: "Maldon Market",
+    town: "Maldon",
+    nextEvent: "Sun 17 May, 9am",
+    description:
+      "Washable dishware supplied to community events to replace single-use items.",
+  },
+  {
+    id: "green-bioenergy-castlemaine",
+    title: "Green Bioenergy Hub",
+    category: "energy",
+    lat: -37.0705,
+    lng: 144.2211,
+    address: "Templeton Street",
+    town: "Castlemaine",
+    nextEvent: "Thu 14 May, 6pm",
+    description: "Local clean energy project advocacy and planning sessions.",
+  },
+  {
+    id: "bright-sparks-newstead",
+    title: "Bright Sparks Workshop",
+    category: "energy",
+    lat: -37.1169,
+    lng: 144.0594,
+    address: "Newstead Community Centre",
+    town: "Newstead",
+    nextEvent: "Wed 13 May, 7pm",
+    description:
+      "Volunteer-led training to help neighbours reduce their energy bills.",
+  },
+  {
+    id: "retrofit-campbells-creek",
+    title: "Retrofit Net Zero Home",
+    category: "efficiency",
+    lat: -37.0859,
+    lng: 144.2116,
+    address: "Campbells Creek",
+    town: "Campbells Creek",
+    nextEvent: "Sat 16 May, open house",
+    description:
+      "Demonstration home showcasing practical retrofits for energy efficiency.",
+  },
+  {
+    id: "diy-toolkit-chewton",
+    title: "DIY Actions Toolkit",
+    category: "efficiency",
+    lat: -37.0755,
+    lng: 144.2573,
+    address: "Chewton Town Hall",
+    town: "Chewton",
+    nextEvent: "Sun 10 May, 2pm",
+    description:
+      "Hands-on guide sessions for low-cost home energy efficiency improvements.",
+  },
+  {
+    id: "regen-ag-harcourt",
+    title: "Regenerative Agriculture Trial",
+    category: "agriculture",
+    lat: -37.0264,
+    lng: 144.2684,
+    address: "Harcourt orchard plot",
+    town: "Harcourt",
+    nextEvent: "Sat 23 May, 10am",
+    description:
+      "Working with local growers on healthier soils and climate-resilient crops.",
+  },
+  {
+    id: "healthy-soils-taradale",
+    title: "Healthy Soils Project",
+    category: "agriculture",
+    lat: -37.0386,
+    lng: 144.3975,
+    address: "Taradale Mechanics Hall",
+    town: "Taradale",
+    nextEvent: "Sun 24 May, 11am",
+    description:
+      "Soil health workshops with testing kits and regenerative practice guides.",
+  },
+];

@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MASG - Improved Web Layout Concept</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="/Users/buicaovien/.cursor/projects/Users-buicaovien-Desktop-masag-project/assets/image-28d3679a-c138-4f12-9487-fbdd8db8444e.png"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+  </head>
+  <body>
+    <header class="site-header" id="siteHeader">
+      <div class="container header-inner">
+        <a class="brand" href="#">
+          <img
+            class="brand-logo"
+            src="/Users/buicaovien/.cursor/projects/Users-buicaovien-Desktop-masag-project/assets/image-28d3679a-c138-4f12-9487-fbdd8db8444e.png"
+            alt="Mount Alexander Sustainability Group logo"
+          />
+          <span>MASG</span>
+        </a>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#focus-areas">Focus Areas</a>
+          <a href="#impact">Impact</a>
+          <a href="#projects-map">Map</a>
+          <a href="#news">News</a>
+          <a href="#youth">Youth</a>
+          <a href="#get-involved">Get Involved</a>
+        </nav>
+        <button class="icon-btn" id="searchToggle" type="button" aria-label="Open search" aria-expanded="false" aria-controls="searchPanel">
+          <span class="icon-search" aria-hidden="true">⌕</span>
+          <span class="icon-btn-label">Search</span>
+        </button>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode">
+          Dark mode
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileNav">
+          Menu
+        </button>
+      </div>
+      <div class="search-panel" id="searchPanel" hidden>
+        <div class="container">
+          <label class="search-field">
+            <span class="search-icon" aria-hidden="true">⌕</span>
+            <input
+              id="searchInput"
+              type="search"
+              autocomplete="off"
+              placeholder="Search programs, news, resources…"
+              aria-label="Search the page"
+            />
+            <kbd class="search-hint">Esc</kbd>
+          </label>
+          <div class="search-results" id="searchResults" role="listbox" aria-label="Search results"></div>
+        </div>
+      </div>
+      <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#focus-areas">Focus Areas</a>
+        <a href="#impact">Impact</a>
+        <a href="#projects-map">Map</a>
+        <a href="#resources">Resources</a>
+        <a href="#news">News</a>
+        <a href="#youth">Youth</a>
+        <a href="#get-involved">Get Involved</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="container hero-grid">
+          <div class="reveal">
+            <p class="eyebrow">Net Zero by 2030</p>
+            <h1>
+              Local voices. Local actions.
+              <span class="highlight">Global change.</span>
+            </h1>
+            <p class="lead">
+              MASG works with the Mount Alexander community through education, research, advocacy, and
+              practical sustainability action — making it easier to learn, participate, and create
+              lasting impact across generations.
+            </p>
+            <div class="cta-row">
+              <button class="btn primary">
+                Get Involved <span class="arrow">→</span>
+              </button>
+              <button class="btn secondary">Explore Focus Areas</button>
+            </div>
+            <div class="hero-stats">
+              <div class="hero-stat">
+                <span class="hero-stat-value" data-count="2030">0</span>
+                <span class="hero-stat-label">Net Zero target year</span>
+              </div>
+              <div class="hero-stat">
+                <span class="hero-stat-value" data-count="4">0</span>
+                <span class="hero-stat-label">Focus areas</span>
+              </div>
+              <div class="hero-stat">
+                <span class="hero-stat-value" data-count="180" data-suffix="+">0</span>
+                <span class="hero-stat-label">Active volunteers</span>
+              </div>
+            </div>
+          </div>
+          <aside class="card quick-stats reveal" aria-label="Action pathways">
+            <h2>Action Pathways</h2>
+            <ul>
+              <li><span><strong>Become a Member</strong> &nbsp;Support local programs</span></li>
+              <li><span><strong>Volunteer</strong> &nbsp;Join projects and events</span></li>
+              <li><span><strong>Donate</strong> &nbsp;Scale impact in the shire</span></li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section autumn-highlight reveal" aria-label="Autumn 2026 eNews highlight">
+        <div class="container">
+          <article class="autumn-feature">
+            <div class="image-frame">
+              <img
+                src="/Users/buicaovien/.cursor/projects/Users-buicaovien-Desktop-masag-project/assets/image-4ebb50df-7670-4807-bedb-cd7ba51da549.png"
+                alt="MASG Zero Net Emissions by 2030 autumn banner"
+              />
+            </div>
+            <div class="autumn-copy">
+              <p class="card-kicker">Updates</p>
+              <h2>Autumn 2026 eNews</h2>
+              <p>
+                Seasonal highlights, community stories, and opportunities to get involved in local
+                sustainability and regenerative projects.
+              </p>
+              <button class="btn primary">
+                Read Autumn Update <span class="arrow">→</span>
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">About MASG</p>
+            <h2>Building a sustainable Mount Alexander, together.</h2>
+            <p class="section-lead">
+              Mount Alexander Sustainability Group (MASG) is the peak sustainability organisation for the
+              Mount Alexander Shire — established in 2006 to support coordinated local climate action.
+            </p>
+          </div>
+
+          <div class="about-feature reveal">
+            <div class="about-image">
+              <img
+                src="./masg%20image/Local%20Voices%20Local%20Actions%20Local%20Change%20%3A%20About%20MASG%20.png"
+                alt="MASG community — local voices, local actions, local change"
+                loading="lazy"
+              />
+            </div>
+            <div class="about-vision">
+              <img
+                class="about-vision-img"
+                src="./masg%20image/MASG%20Vision%20.png"
+                alt="MASG vision statement"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <div class="grid cards-3">
+            <article class="card reveal">
+              <h3>Education</h3>
+              <p>Build practical sustainability knowledge across the community.</p>
+              <a href="#" class="card-link">Learn more</a>
+            </article>
+            <article class="card reveal">
+              <h3>Advocacy</h3>
+              <p>Support wider systems change through local action and partnerships.</p>
+              <a href="#" class="card-link">Learn more</a>
+            </article>
+            <article class="card reveal">
+              <h3>Community-Led</h3>
+              <p>Design and deliver with community, not only for community.</p>
+              <a href="#" class="card-link">Learn more</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="focus-areas" class="section alt">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Focus Areas</p>
+            <h2>Programs across four priorities.</h2>
+            <p class="section-lead">Filter by area to find the programs most relevant to you.</p>
+          </div>
+
+          <div class="filter-bar reveal" role="toolbar" aria-label="Filter focus area programs">
+            <button class="chip active" data-filter="all" type="button">All</button>
+            <button class="chip" data-filter="waste" type="button">♻️ Waste</button>
+            <button class="chip" data-filter="energy" type="button">☀️ Energy</button>
+            <button class="chip" data-filter="efficiency" type="button">🏠 Efficiency</button>
+            <button class="chip" data-filter="agriculture" type="button">🌱 Agriculture</button>
+            <span class="filter-count" id="filterCount" aria-live="polite"></span>
+          </div>
+
+          <div class="grid cards-4" id="focusGrid">
+            <article class="card focus-card reveal" data-category="waste">
+              <div class="focus-thumb">
+                <img src="./masg%20image/Repair%20Cafe.webp" alt="Repair Cafe volunteers" loading="lazy" />
+                <span class="focus-tag">♻️ Waste</span>
+              </div>
+              <h3>Repair Cafe</h3>
+              <p>Volunteer-run sessions to repair, reuse, and reduce household waste.</p>
+              <a href="#" class="card-link">View program</a>
+            </article>
+            <article class="card focus-card reveal" data-category="waste">
+              <div class="focus-thumb">
+                <img src="./masg%20image/Wash%20Against%20Waste.webp" alt="Wash Against Waste community service" loading="lazy" />
+                <span class="focus-tag">♻️ Waste</span>
+              </div>
+              <h3>Wash Against Waste</h3>
+              <p>Community event support to replace single-use items at gatherings.</p>
+              <a href="#" class="card-link">View program</a>
+            </article>
+            <article class="card focus-card reveal" data-category="energy">
+              <div class="focus-thumb">
+                <img src="./masg%20image/Green%20Bioenergy.webp" alt="Green Bioenergy project" loading="lazy" />
+                <span class="focus-tag">☀️ Energy</span>
+              </div>
+              <h3>Green Bioenergy</h3>
+              <p>Local clean energy development and renewable energy advocacy.</p>
+              <a href="#" class="card-link">View program</a>
+            </article>
+            <article class="card focus-card reveal" data-category="energy">
+              <div class="focus-thumb">
+                <img src="./masg%20image/Bright%20Sparks%20%20.png" alt="Bright Sparks volunteer training" loading="lazy" />
+                <span class="focus-tag">☀️ Energy</span>
+              </div>
+              <h3>Bright Sparks</h3>
+              <p>Volunteer training to share energy knowledge across the shire.</p>
+              <a href="#" class="card-link">View program</a>
+            </article>
+            <article class="card focus-card reveal" data-category="efficiency">
+              <div class="focus-thumb">
+                <img src="./masg%20image/Retrofit%20Net%20Zero%20Housing.jpg" alt="Retrofit Net Zero Housing example" loading="lazy" />
+                <span class="focus-tag">🏠 Efficiency</span>
+              </div>
+              <h3>Retrofit Net Zero Housing</h3>
+              <p>Practical home retrofits to reduce energy use and improve comfort.</p>
+              <a href="#" class="card-link">View program</a>
+            </article>
+            <article class="card focus-card reveal" data-category="efficiency">
+              <div class="focus-thumb">
+                <img src="./masg%20image/DIY%20Actions%20Toolkit.webp" alt="DIY Actions Toolkit illustration" loading="lazy" />
+                <span class="focus-tag">🏠 Efficiency</span>
+              </div>
+              <h3>DIY Actions Toolkit</h3>
+              <p>Step-by-step guides for low-cost energy efficiency improvements.</p>
+              <a href="#" class="card-link">View program</a>
+            </article>
+            <article class="card focus-card reveal" data-category="agriculture">
+              <div class="focus-thumb">
+                <img src="./masg%20image/Agriculture.png" alt="Regenerative agriculture fields" loading="lazy" />
+                <span class="focus-tag">🌱 Agriculture</span>
+              </div>
+              <h3>Regenerative Agriculture</h3>
+              <p>Support farmers in building healthier, more resilient ecosystems.</p>
+              <a href="#" class="card-link">View program</a>
+            </article>
+            <article class="card focus-card reveal" data-category="agriculture">
+              <div class="focus-thumb">
+                <img src="./masg%20image/Soil%20Health.webp" alt="Healthy soils regeneration" loading="lazy" />
+                <span class="focus-tag">🌱 Agriculture</span>
+              </div>
+              <h3>Healthy Soils Project</h3>
+              <p>Soil health workshops, testing, and regeneration practices.</p>
+              <a href="#" class="card-link">View program</a>
+            </article>
+          </div>
+
+          <p class="empty-state" id="emptyState" hidden>No programs match this filter.</p>
+        </div>
+      </section>
+
+      <section id="impact" class="section">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Our Impact</p>
+            <h2>Measuring progress to Net Zero 2030.</h2>
+            <p class="section-lead">
+              Live figures from MASG programs across the Mount Alexander Shire — updated each quarter.
+            </p>
+          </div>
+
+          <div class="year-toggle reveal" role="tablist" aria-label="Select year">
+            <button class="year-btn" data-year="2024" role="tab" type="button">2024</button>
+            <button class="year-btn" data-year="2025" role="tab" type="button">2025</button>
+            <button class="year-btn active" data-year="2026" role="tab" type="button" aria-selected="true">2026</button>
+          </div>
+
+          <div class="kpi-grid">
+            <article class="kpi-tile reveal">
+              <span class="kpi-icon" aria-hidden="true">💨</span>
+              <span class="kpi-value" data-kpi="co2" data-suffix=" t">0</span>
+              <span class="kpi-label">Tonnes CO₂ avoided</span>
+              <span class="kpi-trend positive">▲ 18% vs last year</span>
+            </article>
+            <article class="kpi-tile reveal">
+              <span class="kpi-icon" aria-hidden="true">🔧</span>
+              <span class="kpi-value" data-kpi="repairs">0</span>
+              <span class="kpi-label">Items repaired at Repair Cafe</span>
+              <span class="kpi-trend positive">▲ 22% vs last year</span>
+            </article>
+            <article class="kpi-tile reveal">
+              <span class="kpi-icon" aria-hidden="true">🎓</span>
+              <span class="kpi-value" data-kpi="workshops">0</span>
+              <span class="kpi-label">Workshops &amp; events run</span>
+              <span class="kpi-trend positive">▲ 12% vs last year</span>
+            </article>
+            <article class="kpi-tile reveal">
+              <span class="kpi-icon" aria-hidden="true">🙌</span>
+              <span class="kpi-value" data-kpi="volunteers" data-suffix="+">0</span>
+              <span class="kpi-label">Active volunteers</span>
+              <span class="kpi-trend positive">▲ 9% vs last year</span>
+            </article>
+            <article class="kpi-tile reveal">
+              <span class="kpi-icon" aria-hidden="true">🏠</span>
+              <span class="kpi-value" data-kpi="retrofits">0</span>
+              <span class="kpi-label">Households retrofitted</span>
+              <span class="kpi-trend positive">▲ 31% vs last year</span>
+            </article>
+          </div>
+
+          <div class="charts-row">
+            <article class="chart-card reveal">
+              <header class="chart-head">
+                <h3>Progress to Net Zero</h3>
+                <p>Shire emissions (ktCO₂e) vs 2030 target.</p>
+              </header>
+              <div class="chart-canvas" id="trendChart" aria-hidden="true"></div>
+              <table class="visually-hidden" id="trendTable" aria-label="Emissions by year"></table>
+            </article>
+
+            <article class="chart-card reveal">
+              <header class="chart-head">
+                <h3>Impact by Focus Area</h3>
+                <p>Share of CO₂ avoided this year.</p>
+              </header>
+              <div class="donut-wrap">
+                <svg class="donut-chart" id="donutChart" viewBox="0 0 160 160" aria-hidden="true">
+                  <circle class="donut-track" cx="80" cy="80" r="64" />
+                </svg>
+                <div class="donut-center">
+                  <span class="donut-value" id="donutValue">0</span>
+                  <span class="donut-label">t CO₂ total</span>
+                </div>
+              </div>
+              <ul class="legend" id="donutLegend"></ul>
+            </article>
+          </div>
+
+          <p class="impact-meta reveal">
+            <span>Last updated: <strong id="impactUpdated">April 2026</strong></span>
+            <a href="#" class="card-link">Download full report</a>
+          </p>
+        </div>
+      </section>
+
+      <section id="projects-map" class="section alt">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">On the ground</p>
+            <h2>Projects across the Shire.</h2>
+            <p class="section-lead">
+              Explore MASG programs and events on the map — filter by focus area or find something near you.
+            </p>
+          </div>
+
+          <div class="map-controls reveal" role="toolbar" aria-label="Map filters">
+            <button class="chip active" data-map-filter="all" type="button">All</button>
+            <button class="chip" data-map-filter="waste" type="button">♻️ Waste</button>
+            <button class="chip" data-map-filter="energy" type="button">☀️ Energy</button>
+            <button class="chip" data-map-filter="efficiency" type="button">🏠 Efficiency</button>
+            <button class="chip" data-map-filter="agriculture" type="button">🌱 Agriculture</button>
+            <button class="chip near-me" id="nearMeBtn" type="button">📍 Near me</button>
+          </div>
+
+          <div class="map-layout reveal">
+            <div id="masgMap" class="masg-map" role="region" aria-label="Map of MASG projects"></div>
+            <aside class="map-detail" id="mapDetail" aria-live="polite">
+              <p class="map-detail-hint">Select a pin on the map to see project details.</p>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section id="resources" class="section">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Resources</p>
+            <h2>Practical learning, ready to use.</h2>
+            <p class="section-lead">
+              Easy-to-use resources designed to support real action — at home, in groups, and in
+              schools.
+            </p>
+          </div>
+          <div class="grid cards-3">
+            <article class="card reveal">
+              <h3>Guides and Toolkits</h3>
+              <p>Step-by-step resources for everyday sustainable choices.</p>
+              <a href="#" class="card-link">Browse resources</a>
+            </article>
+            <article class="card reveal">
+              <h3>Workshop Materials</h3>
+              <p>Slides, checklists, and summaries from MASG learning sessions.</p>
+              <a href="#" class="card-link">Browse resources</a>
+            </article>
+            <article class="card reveal">
+              <h3>Youth Learning Tracks</h3>
+              <p>Short, friendly pathways to make volunteering accessible.</p>
+              <a href="#" class="card-link">Browse resources</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="news" class="section alt">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">News</p>
+            <h2>Latest from MASG.</h2>
+            <p class="section-lead">Stories, updates, and opportunities from across the shire.</p>
+          </div>
+          <div class="grid cards-3">
+            <article class="card news-card reveal">
+              <div class="news-thumb news-thumb-img">
+                <img
+                  src="/Users/buicaovien/.cursor/projects/Users-buicaovien-Desktop-masag-project/assets/image-4ebb50df-7670-4807-bedb-cd7ba51da549.png"
+                  alt="Autumn 2026 eNews banner"
+                  loading="lazy"
+                />
+              </div>
+              <p class="card-kicker">Updates</p>
+              <h3>Autumn 2026 eNews</h3>
+              <p>Seasonal highlights, practical actions, and local opportunities to participate.</p>
+              <a href="#" class="card-link">Read story</a>
+            </article>
+            <article class="card news-card reveal">
+              <div class="news-thumb news-thumb-img">
+                <img
+                  src="./masg%20image/Fran%27s%20Enegry%20%20.png"
+                  alt="Fran's Energy story"
+                  loading="lazy"
+                />
+              </div>
+              <p class="card-kicker">Updates</p>
+              <h3>Fran's Energy</h3>
+              <p>Community member story and perspectives from MASG participants.</p>
+              <a href="#" class="card-link">Read story</a>
+            </article>
+            <article class="card news-card reveal">
+              <div class="news-thumb news-thumb-img">
+                <img
+                  src="./masg%20image/Bright%20Sparks%20%20.png"
+                  alt="Bright Sparks volunteer program"
+                  loading="lazy"
+                />
+              </div>
+              <p class="card-kicker">Updates</p>
+              <h3>Bright Sparks Program</h3>
+              <p>Volunteer training pathway to build confidence and practical impact.</p>
+              <a href="#" class="card-link">Read story</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="youth" class="section youth-section">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow youth-eyebrow">Youth Network</p>
+            <h2>Sustainability is your future. Shape it.</h2>
+            <p class="section-lead">
+              A dedicated on-ramp for young people (14–25) to learn, volunteer, and lead across the shire.
+            </p>
+          </div>
+
+          <div class="youth-progress reveal" aria-label="Your learning progress">
+            <div class="youth-progress-head">
+              <span>Your progress</span>
+              <span id="youthXpLabel">0 / 3 lessons complete</span>
+            </div>
+            <div class="youth-progress-bar">
+              <div class="youth-progress-fill" id="youthXpFill"></div>
+            </div>
+          </div>
+
+          <div class="grid cards-3 youth-tracks">
+            <article class="card youth-card reveal" data-track="learn">
+              <p class="card-kicker">Learn</p>
+              <h3>Micro-lessons</h3>
+              <p>Bite-size explainers — 5 minutes each. Build up fast.</p>
+              <ul class="lesson-list">
+                <li>
+                  <button class="lesson-toggle" type="button" data-lesson="climate" aria-expanded="false">
+                    <span>Climate 101</span>
+                    <span class="lesson-chev" aria-hidden="true">▾</span>
+                  </button>
+                  <div class="lesson-body">
+                    <p>How greenhouse gases warm the planet, why 1.5°C matters, and what individuals can actually shift.</p>
+                    <button class="btn primary small" data-lesson-complete="climate">Mark complete</button>
+                  </div>
+                </li>
+                <li>
+                  <button class="lesson-toggle" type="button" data-lesson="energy" aria-expanded="false">
+                    <span>Home Energy Basics</span>
+                    <span class="lesson-chev" aria-hidden="true">▾</span>
+                  </button>
+                  <div class="lesson-body">
+                    <p>Where energy goes in a typical home and the top three no-cost changes anyone can make today.</p>
+                    <button class="btn primary small" data-lesson-complete="energy">Mark complete</button>
+                  </div>
+                </li>
+                <li>
+                  <button class="lesson-toggle" type="button" data-lesson="regen" aria-expanded="false">
+                    <span>Regen Agriculture</span>
+                    <span class="lesson-chev" aria-hidden="true">▾</span>
+                  </button>
+                  <div class="lesson-body">
+                    <p>Why healthy soil is the foundation of food security and a big part of the climate solution.</p>
+                    <button class="btn primary small" data-lesson-complete="regen">Mark complete</button>
+                  </div>
+                </li>
+              </ul>
+            </article>
+
+            <article class="card youth-card reveal" data-track="volunteer">
+              <p class="card-kicker">Volunteer</p>
+              <h3>Get hands-on</h3>
+              <p>Age-appropriate ways to contribute without the pressure.</p>
+              <ul class="youth-list">
+                <li>Event helper at Repair Cafe</li>
+                <li>Social media contributor</li>
+                <li>School sustainability ambassador</li>
+                <li>Workshop assistant</li>
+              </ul>
+              <a href="#get-involved" class="card-link">Find a role</a>
+            </article>
+
+            <article class="card youth-card reveal" data-track="lead">
+              <p class="card-kicker">Lead</p>
+              <h3>Step up</h3>
+              <p>Take a seat at the table and shape what MASG does next.</p>
+              <ul class="youth-list">
+                <li>Youth Advisory seat</li>
+                <li>Peer-workshop facilitator</li>
+                <li>Bright Sparks junior track</li>
+                <li>Community storytelling</li>
+              </ul>
+              <a href="#" class="card-link">Apply to lead</a>
+            </article>
+          </div>
+
+          <blockquote class="youth-quote reveal">
+            <p>
+              “Joining MASG meant I stopped feeling anxious about climate and started doing something about
+              it — with people who actually get it.”
+            </p>
+            <footer>— Maya, 19, Castlemaine</footer>
+          </blockquote>
+
+          <div class="cta-row reveal" style="justify-content: center;">
+            <button class="btn primary">Join the Youth Network <span class="arrow">→</span></button>
+          </div>
+        </div>
+      </section>
+
+      <section id="get-involved" class="section">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Get Involved</p>
+            <h2>Take part in local change.</h2>
+            <p class="section-lead">
+              Three quick paths to support MASG and grow community impact.
+            </p>
+          </div>
+          <div class="grid cards-3">
+            <article class="card reveal">
+              <h3>Become a MASG Member</h3>
+              <p>Support long-term sustainability programs and community leadership.</p>
+              <button class="btn primary">Join as Member <span class="arrow">→</span></button>
+            </article>
+            <article class="card reveal">
+              <h3>Volunteer with MASG</h3>
+              <p>Join projects, events, and education activities across focus areas.</p>
+              <button class="btn primary">Volunteer Now <span class="arrow">→</span></button>
+            </article>
+            <article class="card reveal">
+              <h3>Donate</h3>
+              <p>Help fund practical local action and improve program continuity.</p>
+              <button class="btn primary">Donate <span class="arrow">→</span></button>
+            </article>
+          </div>
+
+          <div class="cta-banner reveal" style="margin-top: 1.6rem;">
+            <div>
+              <p class="card-kicker" style="color: rgba(255,255,255,0.85);">Stay connected</p>
+              <h2>Get monthly updates from MASG.</h2>
+              <p>Local stories, sustainability tips, and ways to take action — straight to your inbox.</p>
+            </div>
+            <div class="cta-row">
+              <button class="btn secondary">Subscribe <span class="arrow">→</span></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section alt">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Contact</p>
+            <h2>Get in touch.</h2>
+            <p class="section-lead">We'd love to hear from you.</p>
+          </div>
+          <div class="grid cards-2">
+            <article class="card reveal">
+              <h3>MASG Office</h3>
+              <p>Email: info@masg.org.au</p>
+              <p>30 Templeton Street, Castlemaine</p>
+              <p>PO Box 1043, Castlemaine VIC 3450</p>
+              <div class="contact-socials">
+                <a
+                  class="social-link compact"
+                  href="https://www.facebook.com/mountalex.sustainabilitygroup"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="MASG on Facebook"
+                >
+                  <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path fill="currentColor" d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.7c0-.87.24-1.46 1.49-1.46H16.5V4.6c-.27-.04-1.2-.12-2.28-.12-2.26 0-3.82 1.38-3.82 3.92V10.5H8v3h2.4V21h3.1z"/>
+                  </svg>
+                  <span>Facebook</span>
+                </a>
+                <a
+                  class="social-link compact"
+                  href="https://www.instagram.com/mountalexsustainabilitygroup/"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="MASG on Instagram"
+                >
+                  <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path fill="currentColor" d="M12 2.2c3.2 0 3.584.012 4.85.07 1.17.053 1.805.25 2.227.414.56.217.96.477 1.38.896.42.42.68.82.896 1.38.164.423.36 1.057.414 2.227.058 1.266.07 1.65.07 4.85s-.012 3.584-.07 4.85c-.053 1.17-.25 1.805-.414 2.227-.217.56-.477.96-.896 1.38-.42.42-.82.68-1.38.896-.423.164-1.057.36-2.227.414-1.266.058-1.65.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.053-1.805-.25-2.227-.414a3.72 3.72 0 0 1-1.38-.896 3.72 3.72 0 0 1-.896-1.38c-.164-.423-.36-1.057-.414-2.227C2.212 15.584 2.2 15.2 2.2 12s.012-3.584.07-4.85c.053-1.17.25-1.805.414-2.227.217-.56.477-.96.896-1.38.42-.42.82-.68 1.38-.896.423-.164 1.057-.36 2.227-.414C8.416 2.212 8.8 2.2 12 2.2m0-2.2C8.74 0 8.333.014 7.053.072 5.777.13 4.905.334 4.14.63c-.79.306-1.46.717-2.126 1.384C1.347 2.68.936 3.35.63 4.14.334 4.905.13 5.777.072 7.053.014 8.333 0 8.74 0 12s.014 3.667.072 4.947c.058 1.276.262 2.148.558 2.913.306.79.717 1.46 1.384 2.126.667.667 1.337 1.078 2.126 1.384.765.296 1.637.5 2.913.558C8.333 23.986 8.74 24 12 24s3.667-.014 4.947-.072c1.276-.058 2.148-.262 2.913-.558a5.92 5.92 0 0 0 2.126-1.384 5.92 5.92 0 0 0 1.384-2.126c.296-.765.5-1.637.558-2.913C23.986 15.667 24 15.26 24 12s-.014-3.667-.072-4.947c-.058-1.276-.262-2.148-.558-2.913a5.92 5.92 0 0 0-1.384-2.126A5.92 5.92 0 0 0 19.86.63c-.765-.296-1.637-.5-2.913-.558C15.667.014 15.26 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/>
+                  </svg>
+                  <span>Instagram</span>
+                </a>
+              </div>
+            </article>
+            <article class="card reveal">
+              <h3>Engagement Improvements Included</h3>
+              <p>This concept demonstrates:</p>
+              <ul>
+                <li>Clearer navigation and section hierarchy</li>
+                <li>Stronger call-to-action path for youth and volunteers</li>
+                <li>Better bridge from information to participation</li>
+                <li>Modern UI with hover states, animations, and dark mode</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>Improved MASG-inspired layout concept for digital engagement and participation. Visit <a href="https://www.masg.org.au/" target="_blank" rel="noopener">masg.org.au</a>.</p>
+        <ul class="social-list" aria-label="MASG on social media">
+          <li>
+            <a
+              class="social-link"
+              href="https://www.facebook.com/mountalex.sustainabilitygroup"
+              target="_blank"
+              rel="noopener"
+              aria-label="MASG on Facebook"
+            >
+              <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.7c0-.87.24-1.46 1.49-1.46H16.5V4.6c-.27-.04-1.2-.12-2.28-.12-2.26 0-3.82 1.38-3.82 3.92V10.5H8v3h2.4V21h3.1z"/>
+              </svg>
+              <span>Facebook</span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="social-link"
+              href="https://www.instagram.com/mountalexsustainabilitygroup/"
+              target="_blank"
+              rel="noopener"
+              aria-label="MASG on Instagram"
+            >
+              <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M12 2.2c3.2 0 3.584.012 4.85.07 1.17.053 1.805.25 2.227.414.56.217.96.477 1.38.896.42.42.68.82.896 1.38.164.423.36 1.057.414 2.227.058 1.266.07 1.65.07 4.85s-.012 3.584-.07 4.85c-.053 1.17-.25 1.805-.414 2.227-.217.56-.477.96-.896 1.38-.42.42-.82.68-1.38.896-.423.164-1.057.36-2.227.414-1.266.058-1.65.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.053-1.805-.25-2.227-.414a3.72 3.72 0 0 1-1.38-.896 3.72 3.72 0 0 1-.896-1.38c-.164-.423-.36-1.057-.414-2.227C2.212 15.584 2.2 15.2 2.2 12s.012-3.584.07-4.85c.053-1.17.25-1.805.414-2.227.217-.56.477-.96.896-1.38.42-.42.82-.68 1.38-.896.423-.164 1.057-.36 2.227-.414C8.416 2.212 8.8 2.2 12 2.2m0-2.2C8.74 0 8.333.014 7.053.072 5.777.13 4.905.334 4.14.63c-.79.306-1.46.717-2.126 1.384C1.347 2.68.936 3.35.63 4.14.334 4.905.13 5.777.072 7.053.014 8.333 0 8.74 0 12s.014 3.667.072 4.947c.058 1.276.262 2.148.558 2.913.306.79.717 1.46 1.384 2.126.667.667 1.337 1.078 2.126 1.384.765.296 1.637.5 2.913.558C8.333 23.986 8.74 24 12 24s3.667-.014 4.947-.072c1.276-.058 2.148-.262 2.913-.558a5.92 5.92 0 0 0 2.126-1.384 5.92 5.92 0 0 0 1.384-2.126c.296-.765.5-1.637.558-2.913C23.986 15.667 24 15.26 24 12s-.014-3.667-.072-4.947c-.058-1.276-.262-2.148-.558-2.913a5.92 5.92 0 0 0-1.384-2.126A5.92 5.92 0 0 0 19.86.63c-.765-.296-1.637-.5-2.913-.558C15.667.014 15.26 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/>
+              </svg>
+              <span>Instagram</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="./data/impact.js"></script>
+    <script src="./data/projects.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
