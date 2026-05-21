@@ -17,3 +17,12 @@
 
 # OS / misc
 Thumbs.db
+
+# Env files (never commit secrets)
+.env
+.env.local
+.env.*.local
+
+# Vercel local artifacts
+.vercel
+node_modules/
